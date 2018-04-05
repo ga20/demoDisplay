@@ -1,0 +1,123 @@
+        body p{
+    font-family: "Microsoft YaHei";
+}
+*{
+    padding: 0;
+    margin:0;
+}
+a{
+    text-decoration: none;
+    color: #3CB371; 
+}
+li{
+    list-style: none;
+}
+input,select,textarea{
+   outline:none;
+   border: none;
+   background: none;/*for ie6*/
+}
+.fl{float:left;}
+.fr{float: right;}
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.clearfix{
+    zoom:1;
+}
+body{
+  -moz-user-select: none;
+}
+
+#container{
+  width: 99%;
+  height: 560px;
+  margin:0;
+
+}
+@media screen and (min-width: 366px){      /* 6/6s */ 
+  #container{
+    height: 660px;
+  }
+  .button p{
+    line-height: 116px;
+  }
+}
+@media screen and (min-width: 400px){     /* 平板 */ 
+  #container{
+    height: 720px;
+  }
+   .button p{
+    line-height: 127px;
+  }
+}
+@media screen and (max-width: 325px){   /* 5s */   
+  #container{
+    height: 555px;
+  }
+   .button p{
+    line-height: 100px;
+  }
+}
+
+#result{
+  height: 70px;
+  text-align: right;
+  line-height: 70px;
+  font-size: 30px;
+  color: white;
+  background-color: black;
+}
+.button{
+  width: 24.7%;
+  float: left;
+  height: 19.5%;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  position: relative;
+  background-color: #D3D3D3;
+}
+.button p{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+}
+.button_area{
+  height: 90%;
+}
+.symbol{
+  background-color: #F4A460;
+}
+.setting{
+  background-color: #F4A460;
+}
+.clearRightBorder{
+  border-right: 0;
+}
+.active{
+    background-color: black;
+}
+.active p{
+    color: white;
+}
+
+/* 弹出层样式 */
+#pop-up{ 
+  position: absolute;
+  bottom: 130px;
+  right: 0;
+
+}
+.triangle{
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: transparent;
+  border-top: 10px solid;
+  border-color: #D3D3D3;
+}

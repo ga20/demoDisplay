@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原生js实现轮播</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+	}
+	.clear{ 
+		*zoom:1; 
+	} 
+	.clear:after{ 
+		visibility: none; 
+		content:""; 
+		display:block; 
+		clear:both; 
+		height:0; 
+	}
+		#main{
+			width: 1000%;
+			height: 300px;
+			position: relative;
+		}
+		#wraper{
+			position: relative;
+			width: 500px;
+			overflow: hidden;
+			margin: 0 auto;
+		}
+		#main a{
+			display: block;
+			float: left;
+		}
+		#main img{
+			width: 500px;
+			height: 300px;
+			float: left;	
+			display: inline-block;
+		}
+		ul{
+			position: absolute;
+			left: 18%;
+			top: 250px;
+			z-index: 3;
+			list-style: none;
+		}
+		ul li{
+			float: left;
+			margin-left: 20px;
+		}
+		#btn span{
+			display: block;
+			width: 4px;
+			height: 4px;
+			border: 6px solid white;
+			border-radius: 10px;
+			cursor:pointer;
+		}
+		#btn .selected{
+		border-color:gray;
+		}
+		.btnSpan{
+			position: absolute;
+			width: 40px;
+			top:0;
+			cursor: pointer;
+			line-height: 300px;
+		}
+		#left_btn{
+		height: 300px;
+		left: 0
+		}
+		#right_btn{
+		right: 0px;
+		height: 300px;
+		}
+		.btnSpan:hover{ 
+		background: #696969;
+		opacity: .6;
+		}
+		.btnSpan span{
+			display: inline-block;
+			vertical-align: middle;
+			width: 40px;
+			height: 90px;
+		}
+		#left_btn span{
+			background: url(img/slider_btn_icon.png)no-repeat -54px -83px ;
+			opacity: .8;
+		}
+		#right_btn span{
+			background: url(img/slider_btn_icon.png) no-repeat -45px 0px;
+			opacity: .8;
+		}
+	</style>
+</head>
+<body>
+	<div id="wraper">
+		<div id="main" class="clear">
+			<a href="" >
+				<img src="img/1.JPG" alt=""></a>
+			<a href="">
+				<img src="img/2.JPG" alt=""></a>
+			<a href="">
+				<img src="img/3.JPG" alt=""></a>
+			<a href="">
+				<img src="img/4.JPG" alt=""></a>
+			<a href="">
+				<img src="img/5.JPG" alt=""></a>
+			<a href="">
+				<img src="img/6.JPG" alt=""></a>
+			<a href="">
+				<img src="img/1.JPG" alt=""></a>
+		</div>
+		<ul id="btn">
+			<li>
+				<span href="" class="selected" ></span>
+			</li>
+			<li>
+				<span href=""></span>
+			</li>
+			<li>
+				<span href=""></span>
+			</li>
+			<li>
+				<span href=""></span>
+			</li>
+			<li>
+				<span href=""></span>
+			</li>
+			<li>
+				<span href=""></span>
+			</li>
+		</ul>
+
+		<div id="left_btn" class="btnSpan" >
+			<span></span>
+		</div>
+		<div id="right_btn" class="btnSpan">
+			<span></span>
+		</div>
+
+	</div>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
